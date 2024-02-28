@@ -6,21 +6,21 @@ from declare_dec import dm, dg, gs, r, delta, gamma, beta, k
 from declare_acc import a_acc, n_acc, b_acc, beta_acc, cutoff_acc
 
 # resolution
-sigma_t=widgets.BoundedFloatText(value=0.045, min=0, max=1, step=0.001, continuous_update=False, description=r'$\sigma_{t}$ [ps]')
+sigma_t=widgets.BoundedFloatText(value=0.045, min=0, max=1, step=0.001, continuous_update=False, description=r'$\sigma_{t}$ [ps]',layout=widgets.Layout(width='200px'))
 # plotting
-xmin=widgets.BoundedFloatText(value=0, min=0, max=100, step=1, continuous_update=False, description=r'$t_{min}$ [ps]')
-xmax=widgets.BoundedFloatText(value=5, min=0, max=100, step=1, continuous_update=False, description=r'$t_{max}$ [ps]')
-y_osc=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{dec}$ [a.u.]')
-y_mix=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{mix}$ [a.u.]')
-name=widgets.Text(value='plots/resolution.eps',continuous_update=False)
-save=widgets.ToggleButton(value=False,description='Save')
+xmin=widgets.BoundedFloatText(value=0, min=0, max=100, step=1, continuous_update=False, description=r'$t_{min}$ [ps]',layout=widgets.Layout(width='200px'))
+xmax=widgets.BoundedFloatText(value=5, min=0, max=100, step=1, continuous_update=False, description=r'$t_{max}$ [ps]',layout=widgets.Layout(width='200px'))
+y_osc=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{dec}$ [a.u.]',layout=widgets.Layout(width='200px'))
+y_mix=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{mix}$ [a.u.]',layout=widgets.Layout(width='200px'))
+name=widgets.Text(value='plots/resolution.eps',continuous_update=False,layout=widgets.Layout(width='200px'))
+save=widgets.ToggleButton(value=False,description='Save',layout=widgets.Layout(width='200px'))
 # select
-b_f = widgets.Checkbox(value=True,description=r'$B$$\to$$f$',disabled=False)
-bbar_f = widgets.Checkbox(value=True,description=r'$\overline{B}$$\to$$f$',disabled=False)
-bbar_fbar = widgets.Checkbox(value=True,description=r'$\overline{B}$$\to$$\overline{f}$',disabled=False)
-b_fbar = widgets.Checkbox(value=True,description=r'$B$$\to$$\overline{f}$',disabled=False)
-fold_amix = widgets.Checkbox(value=True,description=r'fold $A_{mix}$',disabled=False)
-k_acc= widgets.Checkbox(value=True,description=r'Acceptance',disabled=False)
+b_f = widgets.Checkbox(value=True,description=r'$B$$\to$$f$',disabled=False,layout=widgets.Layout(width='200px'))
+bbar_f = widgets.Checkbox(value=True,description=r'$\overline{B}$$\to$$f$',disabled=False,layout=widgets.Layout(width='200px'))
+bbar_fbar = widgets.Checkbox(value=True,description=r'$\overline{B}$$\to$$\overline{f}$',disabled=False,layout=widgets.Layout(width='200px'))
+b_fbar = widgets.Checkbox(value=True,description=r'$B$$\to$$\overline{f}$',disabled=False,layout=widgets.Layout(width='200px'))
+fold_amix = widgets.Checkbox(value=True,description=r'fold $A_{mix}$',disabled=False,layout=widgets.Layout(width='200px'))
+k_acc= widgets.Checkbox(value=True,description=r'Acceptance',disabled=False,layout=widgets.Layout(width='200px'))
 
 ## Decay Time Resolution
 wbox_res = HBox([VBox([sigma_t]),VBox([xmin,xmax,y_osc,y_mix]),

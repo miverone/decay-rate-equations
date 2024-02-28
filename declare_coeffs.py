@@ -9,27 +9,27 @@ from declare_ft import omega, d_omega, eff, d_eff
 from declare_asym import a_prod, a_det
 
 # select
-b_f = widgets.Checkbox(value=True,description=r'$B$$\to$$f$',disabled=False)
-bbar_f = widgets.Checkbox(value=False,description=r'$\overline{B}$$\to$$f$',disabled=False)
-bbar_fbar = widgets.Checkbox(value=False,description=r'$\overline{B}$$\to$$\overline{f}$',disabled=False)
-b_fbar = widgets.Checkbox(value=False,description=r'$B$$\to$$\overline{f}$',disabled=False)
-u_f = widgets.Checkbox(value=False,description=r'$U$$\to$$f$',disabled=False)
-u_fbar = widgets.Checkbox(value=False,description=r'$U$$\to$$\overline{f}$',disabled=False)
+b_f = widgets.Checkbox(value=True,description=r'$B$$\to$$f$',disabled=False,layout=widgets.Layout(width='200px'))
+bbar_f = widgets.Checkbox(value=False,description=r'$\overline{B}$$\to$$f$',disabled=False,layout=widgets.Layout(width='200px'))
+bbar_fbar = widgets.Checkbox(value=False,description=r'$\overline{B}$$\to$$\overline{f}$',disabled=False,layout=widgets.Layout(width='200px'))
+b_fbar = widgets.Checkbox(value=False,description=r'$B$$\to$$\overline{f}$',disabled=False,layout=widgets.Layout(width='200px'))
+u_f = widgets.Checkbox(value=False,description=r'$U$$\to$$f$',disabled=False,layout=widgets.Layout(width='200px'))
+u_fbar = widgets.Checkbox(value=False,description=r'$U$$\to$$\overline{f}$',disabled=False,layout=widgets.Layout(width='200px'))
 # select
-k_dec = widgets.Checkbox(value=True,description=r'Decay',disabled=False)
-k_acc= widgets.Checkbox(value=False,description=r'Acceptance',disabled=False)
-k_res= widgets.Checkbox(value=False,description=r'Resolution',disabled=False)
-k_tag= widgets.Checkbox(value=False,description=r'Tagging',disabled=False)
-k_asymm= widgets.Checkbox(value=False,description=r'Asymmetries',disabled=False)
+k_dec = widgets.Checkbox(value=True,description=r'Decay',disabled=False,layout=widgets.Layout(width='200px'))
+k_acc= widgets.Checkbox(value=False,description=r'Acceptance',disabled=False,layout=widgets.Layout(width='200px'))
+k_res= widgets.Checkbox(value=False,description=r'Resolution',disabled=False,layout=widgets.Layout(width='200px'))
+k_tag= widgets.Checkbox(value=False,description=r'Tagging',disabled=False,layout=widgets.Layout(width='200px'))
+k_asymm= widgets.Checkbox(value=False,description=r'Asymmetries',disabled=False,layout=widgets.Layout(width='200px'))
 ## decay rate coefficients
-xmin=widgets.BoundedFloatText(value=0, min=0, max=20, step=1, continuous_update=False, description=r'$t_{min}$ [ps]')
-xmax=widgets.BoundedFloatText(value=5, min=0, max=20, step=1, continuous_update=False, description=r'$t_{max}$ [ps]')
-y_cosh=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{\cosh}$ [a.u.]')
-y_sinh=widgets.BoundedFloatText(value=0.02, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{\sinh}$ [a.u.]')
-y_cos=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{\cos}$ [a.u.]')
-y_sin=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{\sin}$ [a.u.]')
-name=widgets.Text(value='plots/coeffs.eps',continuous_update=False,description='Save as:')
-save=widgets.ToggleButton(value=False,description='Save')
+xmin=widgets.BoundedFloatText(value=0, min=0, max=20, step=1, continuous_update=False, description=r'$t_{min}$ [ps]',layout=widgets.Layout(width='200px'))
+xmax=widgets.BoundedFloatText(value=5, min=0, max=20, step=1, continuous_update=False, description=r'$t_{max}$ [ps]',layout=widgets.Layout(width='200px'))
+y_cosh=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{\cosh}$ [a.u.]',layout=widgets.Layout(width='200px'))
+y_sinh=widgets.BoundedFloatText(value=0.02, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{\sinh}$ [a.u.]',layout=widgets.Layout(width='200px'))
+y_cos=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{\cos}$ [a.u.]',layout=widgets.Layout(width='200px'))
+y_sin=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{\sin}$ [a.u.]',layout=widgets.Layout(width='200px'))
+name=widgets.Text(value='plots/coeffs.eps',continuous_update=False,description='Save as:',layout=widgets.Layout(width='200px'))
+save=widgets.ToggleButton(value=False,description='Save',layout=widgets.Layout(width='200px'))
 
 ## Decay Rate Coefficients
 wbox_coeffs = HBox([VBox([xmin,xmax,y_cosh,y_sinh,y_cos,y_sin]),

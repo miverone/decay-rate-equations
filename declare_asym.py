@@ -8,25 +8,25 @@ from declare_res import sigma_t
 from declare_ft import omega, d_omega, eff, d_eff
 
 # asymmetries
-a_prod=widgets.BoundedFloatText(value=-0.01, min=-1, max=1, step=0.001, continuous_update=False, description=r'$a_{prod}$')
-a_det=widgets.BoundedFloatText(value=0.01, min=-1, max=1, step=0.001, continuous_update=False, description=r'$a_{det}$')
+a_prod=widgets.BoundedFloatText(value=-0.01, min=-1, max=1, step=0.001, continuous_update=False, description=r'$a_{prod}$',layout=widgets.Layout(width='200px'))
+a_det=widgets.BoundedFloatText(value=0.01, min=-1, max=1, step=0.001, continuous_update=False, description=r'$a_{det}$',layout=widgets.Layout(width='200px'))
 # plotting
-xmin=widgets.BoundedFloatText(value=0, min=0, max=100, step=1, continuous_update=False, description=r'$t_{min}$ [ps]')
-xmax=widgets.BoundedFloatText(value=5, min=0, max=100, step=1, continuous_update=False, description=r'$t_{max}$ [ps]')
-y_tag=widgets.BoundedFloatText(value=0.4, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{tag}$ [a.u.]')
-y_untag=widgets.BoundedFloatText(value=0.2, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{untag}$ [a.u.]')
-y_mix=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{mix}$ [a.u.]')
-name=widgets.Text(value='plots/asymmetries.eps',continuous_update=False)
-save=widgets.ToggleButton(value=False,description='Save')
+xmin=widgets.BoundedFloatText(value=0, min=0, max=100, step=1, continuous_update=False, description=r'$t_{min}$ [ps]',layout=widgets.Layout(width='200px'))
+xmax=widgets.BoundedFloatText(value=5, min=0, max=100, step=1, continuous_update=False, description=r'$t_{max}$ [ps]',layout=widgets.Layout(width='200px'))
+y_tag=widgets.BoundedFloatText(value=0.4, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{tag}$ [a.u.]',layout=widgets.Layout(width='200px'))
+y_untag=widgets.BoundedFloatText(value=0.2, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{untag}$ [a.u.]',layout=widgets.Layout(width='200px'))
+y_mix=widgets.BoundedFloatText(value=1, min=0, max=10, step=0.1, continuous_update=False, description=r'$y_{mix}$ [a.u.]',layout=widgets.Layout(width='200px'))
+name=widgets.Text(value='plots/asymmetries.eps',continuous_update=False,layout=widgets.Layout(width='200px'))
+save=widgets.ToggleButton(value=False,description='Save',layout=widgets.Layout(width='200px'))
 # select
-b_f = widgets.Checkbox(value=True,description=r'$B$$\to$$f$',disabled=False)
-bbar_f = widgets.Checkbox(value=True,description=r'$\overline{B}$$\to$$f$',disabled=False)
-bbar_fbar = widgets.Checkbox(value=True,description=r'$\overline{B}$$\to$$\overline{f}$',disabled=False)
-b_fbar = widgets.Checkbox(value=True,description=r'$B$$\to$$\overline{f}$',disabled=False)
-fold_amix = widgets.Checkbox(value=True,description=r'fold $A_{mix}$',disabled=False)
-k_acc= widgets.Checkbox(value=True,description=r'Acceptance',disabled=False)
-k_res= widgets.Checkbox(value=True,description=r'Resolution',disabled=False)
-k_tag= widgets.Checkbox(value=True,description=r'Tagging',disabled=False)
+b_f = widgets.Checkbox(value=True,description=r'$B$$\to$$f$',disabled=False,layout=widgets.Layout(width='200px'))
+bbar_f = widgets.Checkbox(value=True,description=r'$\overline{B}$$\to$$f$',disabled=False,layout=widgets.Layout(width='200px'))
+bbar_fbar = widgets.Checkbox(value=True,description=r'$\overline{B}$$\to$$\overline{f}$',disabled=False,layout=widgets.Layout(width='200px'))
+b_fbar = widgets.Checkbox(value=True,description=r'$B$$\to$$\overline{f}$',disabled=False,layout=widgets.Layout(width='200px'))
+fold_amix = widgets.Checkbox(value=True,description=r'fold $A_{mix}$',disabled=False,layout=widgets.Layout(width='200px'))
+k_acc= widgets.Checkbox(value=True,description=r'Acceptance',disabled=False,layout=widgets.Layout(width='200px'))
+k_res= widgets.Checkbox(value=True,description=r'Resolution',disabled=False,layout=widgets.Layout(width='200px'))
+k_tag= widgets.Checkbox(value=True,description=r'Tagging',disabled=False,layout=widgets.Layout(width='200px'))
 
 ## Asymmetries
 wbox_asymm = HBox([VBox([a_prod,a_det]),
